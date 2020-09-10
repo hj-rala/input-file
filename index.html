@@ -1,0 +1,23 @@
+/* file */
+.fileBox { position: relative; display: inline-block;font-size: 0; width: 100%;}
+.fileBox .fileName {vertical-align: bottom;display: inline-block; width:calc(100% - 90px);}
+.fileBox .fileName .fileText {cursor:default;}
+.fileBox .fileBtn {display: inline-block;}
+.fileBox .fileBtn a {margin-left: 10px; display: inline-block; width: 80px; height: 46px; line-height: 46px; font-size: 20px; color: #fff; font-weight: 300; background: #0350dc; border: 1px solid #0948bc; border-radius: 10px; text-align: center;}
+.fileBox .hideCon {display: none;}
+
+
+
+
+
+<div class="fileBox">
+  <div class="fileName">
+    <input type="text" name="fileName01" id="fileName01" class="fileText" value="" readonly="" placeholder="성능점검기록부" onfocus="javascrpt:blur();">
+  </div>
+  <div class="fileBtn">
+    <a href="javascript:;">첨부</a>
+  </div>
+  <div class="hideCon">
+    <input type="file" name="attr_file" id="attr_file" class="fileHidden" onchange="javascript: document.getElementById('fileName01').value = this.value">
+  </div>
+</div>
