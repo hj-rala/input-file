@@ -24,8 +24,8 @@
 
 
 
-
-
-$(".fileBtn").bind("click",function(){
-		$("#attr_file").click();
+$(".fileBtn").each(function(){
+	$(this).bind("click",function(){
+		$(this).siblings('.hideCon').children("#attr_file").click();
 	});
+});
